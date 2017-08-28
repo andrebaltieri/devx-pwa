@@ -1,0 +1,23 @@
+ion-content {
+  background-color: #353535 !important;
+}
+
+ion-list {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+ion-item {
+  background-color: #454545 !important;
+  color: #fff !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  margin-bottom: 10px !important;
+
+  img {
+    width: 64px !important;
+    height: 64px !important;
+    padding: 5px !important;
+    margin-left: 8px;
+  }
+}

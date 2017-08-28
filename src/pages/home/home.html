@@ -1,0 +1,28 @@
+<ion-content padding>
+  <p text-center>
+    <img src="assets/images/logo_devx-color-500x119.png" alt="DevXperience" width="100%">
+  </p>
+  <ion-list no-lines *ngFor="let speaker of speakers">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{ speaker.image }}" title="{{ speaker.name }}" alt="{{ speaker.name }}" style="border-radius: 0px !important;" />
+      </ion-avatar>
+      <h2>{{ speaker.name }}</h2>
+      <p style="color: #02A3EB">Palestrante</p>
+    </ion-item>
+  </ion-list>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let speaker of speakers" col-sm-12 col-md-4 col-lg-4 col-xl-3>
+        <ion-card>
+          <img src="{{ speaker.image }}" title="{{ speaker.name }}" alt="{{ speaker.name }}" />
+          <ion-card-content>
+            <ion-card-title text-center>
+              {{ speaker.name }}
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>
