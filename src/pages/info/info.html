@@ -1,13 +1,13 @@
 <ion-content padding class="auto-scroll">
   <p text-center>
-    <img src="assets/images/logo-large-black.svg" alt="DevXperience" width="80%">
+    <img src="assets/images/logo-large-black.svg" alt="DevXperience" width="80%" class="animated pulse">
   </p>
-  <p text-center class="slogan-text">
+  <p text-center class="slogan-text animated fadeIn">
     Um novo evento de tecnologia para o desenvolvimento de software moderno.
   </p>
   <br>
   <ion-list no-lines>
-    <ion-item>
+    <ion-item class="animated fadeInLeft" (click)="goToLocation()">
       <ion-avatar item-start>
         <img src="assets/icon/location.png" title="São Paulo" alt="São Paulo" />
       </ion-avatar>
@@ -15,7 +15,7 @@
       <p>Centro de Convenções Rebouças</p>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="animated fadeInRight" (click)="goToCalendar()">
       <ion-avatar item-start>
         <img src="assets/icon/calendar.png" title="1 e 2 de Setembro" alt="1 e 2 de Setembro" />
       </ion-avatar>
@@ -23,7 +23,7 @@
       <p>Dias 1 e 2</p>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="animated fadeInLeft" (click)="goToSpeakers()">
       <ion-avatar item-start>
         <img src="assets/icon/ticket.png" title="42 palestras" alt="42 palestras" />
       </ion-avatar>
@@ -31,9 +31,9 @@
       <p>300 participantes</p>
     </ion-item>
 
-    <ion-item text-center class="buy-list-item">
-      <h2>Increva-se</h2>
-      <p>Garanta seu Ingresso</p>
+    <ion-item text-center class="buy-list-item animated fadeInRight">
+      <h2 text-center>Deixe sua Mensagem</h2>
+      <p text-center>Contribua para o evento</p>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the InfoPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { IonicPage, Tabs, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -14,12 +7,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'info.html',
 })
 export class InfoPage {
+  tabsRef: Tabs;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tabsRef = this.navCtrl.parent;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoPage');
+  goToSpeakers() {
+    this.tabsRef.select(1);
   }
 
+  goToCalendar() {
+    this.tabsRef.select(2);
+  }
+
+  goToLocation() {
+    this.tabsRef.select(3);
+  }
 }

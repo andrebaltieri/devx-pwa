@@ -1,39 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
 ion-content {
-  font-family: 'Montserrat', sans-serif;
-  background: #03a9f5;
-  background: -moz-linear-gradient(-45deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
-  background: -webkit-linear-gradient(-45deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
+  font-family: 'Montserrat', sans-serif; // background: #03a9f5;
+  // background: -moz-linear-gradient(-45deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
+  // background: -webkit-linear-gradient(-45deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
+  // background: linear-gradient(135deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f5', endColorstr='#018cee', GradientType=1);
+  // background: linear-gradient(270deg, #03a9f5, #018cee);
   background: linear-gradient(135deg, #03a9f5 0%, #03a9f5 65%, #018cee 65%, #018cee 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f5', endColorstr='#018cee', GradientType=1);
+  background-size: 200% 200%;
+  -webkit-animation: bganim 2s ease 1;
+  -moz-animation: bganim 2s ease 1;
+  animation: bganim 2s ease 1;
+  animation-fill-mode: forwards;
+
+  @-webkit-keyframes bganim {
+    100% {
+      background-position: 0% 100%
+    }
+  }
+  @-moz-keyframes bganim {
+    100% {
+      background-position: 0% 100%
+    }
+  }
+  @keyframes bganim {
+    100% {
+      background-position: 0% 100%
+    }
+  }
 }
 
-ion-list {
-  margin: 0px !important;
-  padding: 0px !important;
+page-info {
+  ion-list {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  ion-item {
+    height: 140px;
+    background-color: #fff !important;
+    border-bottom: 5px solid #0390D1 !important;
+    color: #555 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-bottom: 35px !important;
+    h2 {
+      font-weight: 500 !important;
+      font-size: 24px !important;
+    }
+    p {
+      font-weight: 300 !important;
+      color: #02A3EB !important;
+    }
+    img {
+      width: 64px !important;
+      height: 64px !important;
+      padding: 5px !important;
+      margin-left: 8px;
+    }
+  }
 }
 
-ion-item {
-  height: 140px;
-  background-color: #fff !important;
-  border-bottom: 5px solid #0390D1 !important;
-  color: #555 !important;
-  margin: 0px !important;
-  padding: 0px !important;
-  margin-bottom: 35px !important;
-  h2 {
-    font-weight: 500 !important;
-    font-size: 24px !important;
+page-calendar,
+page-speakers {
+  ion-list {
+    margin: 0px !important;
+    padding: 0px !important;
   }
-  p {
-    font-weight: 300 !important;
-    color: #02A3EB !important;
+  ion-list-header {
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
   }
-  img {
-    width: 64px !important;
-    height: 64px !important;
-    padding: 5px !important;
-    margin-left: 8px;
+  ion-item {
+    height: 140px;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-bottom: 15px !important;
+    h2 {
+      font-weight: 500 !important;
+      font-size: 24px !important;
+    }
+    p {
+      font-weight: 300 !important;
+      color: #fff !important;
+    }
+    img {
+      padding: 5px;
+      margin: 5px;
+      width: 96px !important;
+      height: 96px !important;
+    }
+  }
+}
+
+page-speaker-info {
+  .toolbar {
+    .toolbar-background {
+      background-color: transparent !important;
+      border: none !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+    }
   }
 }
 
@@ -69,4 +139,15 @@ ion-item {
   height: 96px !important;
   padding: 5px !important;
   margin-left: 18px;
+}
+
+.speaker-info {
+  color: #fff !important;
+  font-weight: 100 !important;
+}
+
+.speaker-info-image {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 96px;
 }

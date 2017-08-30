@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only showWhen="portrait">
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    <ion-title>
+      Deixe sua Mensagem
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="auto-scroll" padding text-center>
+  <video id="video" width="320" height="240" autoplay></video>
+  <canvas id="canvas" style="display:none;" width="320" height="240" class="nashville"></canvas>
+  <br>
+  <button ion-button (click)="takePicture()">Tirar Foto</button>
+
+  <ion-card *ngFor="let picture of pictures">
+    <img src="{{ picture.data }}" alt="" class="{{ picture.filter }}">
+    <ion-card-content>
+      <ion-card-title>
+        {{ picture.filter }}
+      </ion-card-title>
+      <p>
+        The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

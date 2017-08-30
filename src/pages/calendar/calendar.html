@@ -1,18 +1,48 @@
 <ion-content padding class="auto-scroll">
-    <br>
-    <h1 text-center class="title">
-      Agenda
-    </h1>
-    <hr class="title-hr">
-    <br>
-    <ion-list no-lines>
-      <ion-item>
+  <br>
+  <h1 text-center class="title">
+    Agenda
+  </h1>
+  <hr class="title-hr">
+  <br>
+  <ion-segment [(ngModel)]="day" color="light">
+    <ion-segment-button value="one">Dia 1 - Sexta</ion-segment-button>
+    <ion-segment-button value="two">Dia 2 - Sábado</ion-segment-button>
+  </ion-segment>
+  <br>
+  <div [ngSwitch]="day">
+    <ion-list no-lines *ngSwitchCase="'one'">
+      <ion-list-header>09h30 - 10h20</ion-list-header>
+      <ion-item text-wrap>
         <ion-avatar item-start>
-          <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
+          <img src="assets/images/rodrigokono.jpg" title="São Paulo" alt="São Paulo" />
         </ion-avatar>
-        <h2>André Baltieri</h2>
-        <p>Palestrantes</p>
+        <h3>Rodrigo Kono</h3>
+        <p>Conhecimentos para tomar atitude e migrar sua aplicação para ASP.NET Core</p>
+        <p><small><strong>SALA A</strong></small></p>
+      </ion-item>
+      <ion-item text-wrap>
+        <ion-avatar item-start>
+          <img src="assets/images/emmanuelbrandao.png" title="São Paulo" alt="São Paulo" />
+        </ion-avatar>
+        <h3>Emmanuel G. Brandão</h3>
+        <p>Automatizando seu pipeline de Docker</p>
+        <p><small><strong>SALA B</strong></small></p>
+      </ion-item>
+      <ion-item text-wrap>
+          <ion-avatar item-start>
+            <img src="http://placehold.it/96" title="São Paulo" alt="São Paulo" />
+          </ion-avatar>
+          <h3>Carlos Alves</h3>
+          <p>Evitando o caos nos projetos com princípios, práticas e padrões de desenvolvimento de software</p>
+          <p><small><strong>SALA C</strong></small></p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'two'">
+      <ion-item>
+        <h1>Dia 2</h1>
       </ion-item>
     </ion-list>
-  </ion-content>
-  
+  </div>
+</ion-content>

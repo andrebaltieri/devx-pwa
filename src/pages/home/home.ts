@@ -9,10 +9,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
   public speakers: any[] = [];
+
   infoTab: string;
   calendarTab: string;
   speakersTab: string;
   locationTab: string;
+  messageTab: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private data: DataProvider) {
     this.speakers = data.getSpeakers();
@@ -20,5 +22,6 @@ export class HomePage {
     this.calendarTab = 'CalendarPage';
     this.speakersTab = 'SpeakersPage';
     this.locationTab = 'LocationPage';
+    this.messageTab = 'MessagePage';
   }
 }
