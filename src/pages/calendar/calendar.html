@@ -13,35 +13,58 @@
   <div [ngSwitch]="day">
     <ion-list no-lines *ngSwitchCase="'one'">
       <ion-list-header>09h30 - 10h20</ion-list-header>
-      <ion-item text-wrap>
+
+      <ion-item text-wrap (click)="showInfo('8')">
         <ion-avatar item-start>
-          <img src="assets/images/rodrigokono.jpg" title="São Paulo" alt="São Paulo" />
+          <img src="assets/images/speakers/rodrigo-kono.png" title="Rodrigo Kono" alt="Rodrigo Kono" />
         </ion-avatar>
         <h3>Rodrigo Kono</h3>
         <p>Conhecimentos para tomar atitude e migrar sua aplicação para ASP.NET Core</p>
         <p><small><strong>SALA A</strong></small></p>
       </ion-item>
-      <ion-item text-wrap>
+
+      <ion-item text-wrap (click)="showInfo('5')">
         <ion-avatar item-start>
-          <img src="assets/images/emmanuelbrandao.png" title="São Paulo" alt="São Paulo" />
+          <img src="assets/images/speakers/emmanuel-brandao.png" title="Emmanuel Gomes Brandão" alt="Emmanuel Gomes Brandão" />
         </ion-avatar>
-        <h3>Emmanuel G. Brandão</h3>
+        <h3>Emmanuel Gomes Brandão</h3>
         <p>Automatizando seu pipeline de Docker</p>
         <p><small><strong>SALA B</strong></small></p>
       </ion-item>
-      <ion-item text-wrap>
-          <ion-avatar item-start>
-            <img src="http://placehold.it/96" title="São Paulo" alt="São Paulo" />
-          </ion-avatar>
-          <h3>Carlos Alves</h3>
-          <p>Evitando o caos nos projetos com princípios, práticas e padrões de desenvolvimento de software</p>
-          <p><small><strong>SALA C</strong></small></p>
-        </ion-item>
+
+      <ion-item text-wrap (click)="showInfo('3')">
+        <ion-avatar item-start>
+          <img src="assets/images/speakers/carlos-alves.png" title="Carlos Alves" alt="Carlos Alves" />
+        </ion-avatar>
+        <h3>Carlos Alves</h3>
+        <p>Evitando o caos nos projetos com princípios, práticas e padrões de desenvolvimento de software</p>
+        <p><small><strong>SALA C</strong></small></p>
+      </ion-item>
+
+      <ion-list-header>10h30 - 11h20</ion-list-header>
+
+      <ion-item text-wrap (click)="showInfo('7')">
+        <ion-avatar item-start>
+          <img src="assets/images/speakers/rodrigo-branas.png" title="Rodrigo Branas" alt="Rodrigo Branas" />
+        </ion-avatar>
+        <h3>Rodrigo Branas</h3>
+        <p>Do Callback ao Async/Await</p>
+        <p><small><strong>SALA A</strong></small></p>
+      </ion-item>
     </ion-list>
 
+
+
     <ion-list *ngSwitchCase="'two'">
-      <ion-item>
-        <h1>Dia 2</h1>
+      <ion-list-header>09h30 - 10h20</ion-list-header>
+
+      <ion-item text-wrap (click)="showInfo('1')">
+        <ion-avatar item-start>
+          <img src="assets/images/speakers/andre-baltieri.png" title="André Baltieri" alt="André Baltieri" />
+        </ion-avatar>
+        <h3>André Baltieri</h3>
+        <p>Um novo mundo: Progressive Web Apps</p>
+        <p><small><strong>SALA A</strong></small></p>
       </ion-item>
     </ion-list>
   </div>

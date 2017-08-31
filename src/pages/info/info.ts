@@ -24,4 +24,8 @@ export class InfoPage {
   goToLocation() {
     this.tabsRef.select(3);
   }
+
+  goToMessage() {
+    this.tabsRef.select(4);
+  }
 }

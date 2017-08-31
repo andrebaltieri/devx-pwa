@@ -1,5 +1,6 @@
+import { DataProvider } from './../../providers/data/data';
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,8 +8,21 @@ import { IonicPage } from 'ionic-angular';
   templateUrl: 'calendar.html',
 })
 export class CalendarPage {
+  public speakers: any[] = [];
   public day: string = 'one';
 
-  constructor() {
+  constructor(private modalCtrl: ModalController, private data: DataProvider) {
+    this.speakers = data.getSpeakers();
+  }
+
+  showInfo(id) {
+    let speaker: any = {};
+
+    this.speakers.forEach((item) => {
+      if (item.id.toString() == id.toString()) {
+        speaker = item;
+      }
+    });
+    this.modalCtrl.create('SpeakerInfoPage', { speaker: speaker }).present();
   }
 }

@@ -5,41 +5,13 @@
   </h1>
   <hr class="title-hr">
   <br>
-  <ion-list no-lines>
-    <ion-item class="animated fadeInLeft" (click)="showInfo()" text-wrap>
+  <ion-list no-lines>    
+    <ion-item class="animated fadeIn" (click)="showInfo(speaker)" text-wrap *ngFor="let speaker of speakers">
       <ion-avatar item-start>
-        <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
+        <img src="assets/images/speakers/{{ speaker.image }}" title="{{ speaker.name }}" alt="{{ speaker.name }}" class="speaker-image" />
       </ion-avatar>
-      <h3>André Baltieri</h3>
-      <p>Um novo mundo: Progressive Web Apps</p>
-    </ion-item>
-    <ion-item class="animated fadeInLeft" (click)="showInfo()" text-wrap>
-      <ion-avatar item-start>
-        <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
-      </ion-avatar>
-      <h3>André Baltieri</h3>
-      <p>Um novo mundo: Progressive Web Apps</p>
-    </ion-item>
-    <ion-item class="animated fadeInLeft" (click)="showInfo()" text-wrap>
-      <ion-avatar item-start>
-        <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
-      </ion-avatar>
-      <h3>André Baltieri</h3>
-      <p>Um novo mundo: Progressive Web Apps</p>
-    </ion-item>
-    <ion-item class="animated fadeInLeft" (click)="showInfo()" text-wrap>
-      <ion-avatar item-start>
-        <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
-      </ion-avatar>
-      <h3>André Baltieri</h3>
-      <p>Um novo mundo: Progressive Web Apps</p>
-    </ion-item>
-    <ion-item class="animated fadeInLeft" (click)="showInfo()" text-wrap>
-      <ion-avatar item-start>
-        <img src="assets/images/andrebaltieri.png" title="São Paulo" alt="São Paulo" class="speaker-image" />
-      </ion-avatar>
-      <h3>André Baltieri</h3>
-      <p>Um novo mundo: Progressive Web Apps</p>
+      <h3>{{ speaker.name }}</h3>
+      <p>{{ speaker.presentation.title }}</p>
     </ion-item>
   </ion-list>
 </ion-content>

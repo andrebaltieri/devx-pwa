@@ -10,18 +10,16 @@
 
 <ion-content padding class="auto-scroll">
   <h1 text-center class="title">
-    André Baltieri
+    {{ speaker.name }}
   </h1>
   <hr class="title-hr">
   <br><br>
   <p text-center>
-    <img src="assets/images/andrebaltieri.png" title="André Baltieri" alt="André Baltieri" class="speaker-info-image" />
+    <img src="assets/images/speakers/{{ speaker.image }}" title="{{ speaker.name }}" alt="{{ speaker.name }}" class="speaker-info-image" />
   </p>
   <br>
   <div padding class="speaker-info">
-    <h3 text-center>Um novo mundo: Progressive Web Apps</h3>
-    <p text-center>Você já parou para pensar como vai ficar o mercado Web com o crescimento exponencial das aplicações Mobile? E como vão
-      ficar as aplicações Web, com os telefones cada vez mais poderosos, com frameworks cada vez melhores? Precisamos conversar
-      sobre PWA!</p>
+    <h3 text-center>{{ speaker.presentation.title }}</h3>
+    <p text-center>{{ speaker.presentation.description }}</p>
   </div>
 </ion-content>

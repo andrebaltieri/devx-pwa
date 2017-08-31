@@ -13,19 +13,32 @@
   <meta name="theme-color" content="#4e8ef7">
 
   <!-- cordova.js required for cordova apps -->
-  <script src="cordova.js"></script>
+  <!-- <script src="cordova.js"></script> -->
 
-  <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('service worker installed'))
         .catch(err => console.error('Error', err));
     }
-  </script>-->
+  </script>
 
   <link href="build/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/cssgram.min.css">
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "b127ce0b-07b8-41d6-9dcf-aceb93b72aaf",
+      autoRegister: true,
+      notifyButton: {
+        enable: false 
+      }
+    }]);
+
+  </script>
 </head>
 
 <body>

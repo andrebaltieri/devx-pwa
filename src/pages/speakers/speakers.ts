@@ -1,3 +1,4 @@
+import { DataProvider } from './../../providers/data/data';
 import { Component } from '@angular/core';
 import { IonicPage, ModalController } from 'ionic-angular';
 
@@ -7,10 +8,13 @@ import { IonicPage, ModalController } from 'ionic-angular';
   templateUrl: 'speakers.html',
 })
 export class SpeakersPage {
-  constructor(private modalCtrl: ModalController) {
+  public speakers: any[] = [];
+
+  constructor(private modalCtrl: ModalController, data: DataProvider) {
+    this.speakers = data.getSpeakers();
   }
 
-  showInfo() {
-    this.modalCtrl.create('SpeakerInfoPage', null).present();
+  showInfo(speaker) {
+    this.modalCtrl.create('SpeakerInfoPage', { speaker: speaker }).present();
   }
 }

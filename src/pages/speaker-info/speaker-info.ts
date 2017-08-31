@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController } from 'ionic-angular';
+import { IonicPage, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,7 +7,10 @@ import { IonicPage, ViewController } from 'ionic-angular';
   templateUrl: 'speaker-info.html',
 })
 export class SpeakerInfoPage {
-  constructor(private viewCtrl: ViewController) {
+  public speaker: any = {};
+
+  constructor(private viewCtrl: ViewController, private navParams: NavParams) {
+    this.speaker = this.navParams.get('speaker');
   }
 
   dismiss() {
